@@ -108,7 +108,12 @@ void cParticle::change_coordin (TVector3 new_coordin) {
 #ifdef USE_SUPER_PUPER_GUARDS	
 	_ASSERT_OK_()
 #endif
-		m_coordin = new_coordin;
+	
+		m_coordin = new_coordin;4
+		
+#ifdef USE_SUPER_PUPER_GUARDS	
+	_ASSERT_OK_()
+#endif
 }
 
 //==============================
@@ -127,25 +132,25 @@ void cParticle::change_speed (TVector3 new_speed) {
 //==============================
 void cParticle::change_mass (double  new_mass) {
 #ifdef USE_SUPER_PUPER_GUARDS	
-	_ASSERT_OK_()
+	_ASSERT_OK_();
 #endif
 
 		m_mass = new_mass;
 
 #ifdef USE_SUPER_PUPER_GUARDS	
-	_ASSERT_OK_()
+	_ASSERT_OK_();
 #endif
 }
 
 //==============================
 void cParticle::change_radii (double new_radii) {
 #ifdef USE_SUPER_PUPER_GUARDS	
-	_ASSERT_OK_()
+	_ASSERT_OK_();
 #endif
 
 		m_radii = new_radii;
 
 #ifdef USE_SUPER_PUPER_GUARDS	
-	_ASSERT_OK_()
+	_ASSERT_OK_();
 #endif
 }

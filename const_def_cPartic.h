@@ -20,13 +20,34 @@
 																	return true; 
 																	
 //========================================		
-#define _DEBUG_ASSERT_(msg) cout << _FUNC_ << ":" << msg; assert(0);
-	#define _ASSERT_OK_() if (!this->Ok ()) { \
+	#define _DEBUG_ASSERT_(msg) cout << _FUNC_ << ":" << msg; assert(0);
+	#define _ASSERT_OK_(); if (!this->Ok ()) { \
 						this->show (); \
 						_DEBUG_ASSERT_("Not Ok!") \
 					} 
+
 					
 //========================================		
 #define  USE_SUPER_PUPER_GUARDS	
+
+const int one_part_in_collid = -111;
+unsigned const int time_to_collide_passid = 999999999;
+//========================================		
+struct part_param {
+	double x;	
+	double y;
+	double z;
+	double mass;
+	double radii;
+	double px;
+	double py; 
+	double pz;
+
+};
+
+struct rezalt_collider {
+	int t;
+}	;
+
 												
 #endif

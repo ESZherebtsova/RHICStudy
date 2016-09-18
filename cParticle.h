@@ -7,7 +7,7 @@ class cParticle {
 	
 	public:
 	
-		cParticle (double x_, double _y, double _z, double mass_, double radii_, double px_, double py_, double pz_);
+		cParticle (double x_, double y_, double z_, double mass_, double radii_, double px_, double py_, double pz_);
 		~cParticle 	();
 		bool show 	();
 		bool Ok 		();
