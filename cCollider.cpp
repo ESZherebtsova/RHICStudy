@@ -20,17 +20,25 @@ cCollider::cCollider (cParticle particle_) {
 cCollider::cCollider  (int N_, part_param param_, int pointer_) {
 	
 	for (int i = pointer_; i < N_; i++) {
-		m_part [i] = new cParticle (param_.x, param_.y, param_.z, param_.mass, param_.radii, param_.px, param_.py, param_.pz);
+		//111111111111111111111111111111111
+			m_part [i] = new cParticle (param_.x, param_.y, param_.z, param_.mass, param_.radii, param_.px, param_.py, param_.pz);
+		//2222222222222222222222222222222
+			m_part.push_back(new cParticle (param_.x, param_.y, param_.z, param_.mass, param_.radii, param_.px, param_.py, param_.pz));
+		//3333333333333333333333333333333
+			m_part.resize (10);
+			m_part [i] = new cParticle (param_.x, param_.y, param_.z, param_.mass, param_.radii, param_.px, param_.py, param_.pz);
+		//==============================
 		m_counter = i;
 	}
 	m_time = 0;
 } 
 //==============================
 cCollider::~cCollider () {
-	
-	if (m_part [m_counter] != NULL) {
-      delete [] m_part[];
-   } 
+	for (int i = 0; i < m_counter; i++) {	
+		if (m_part [i] != NULL) {
+				delete   m_part[i];
+		} 	
+	}
 }
 
 //==============================
